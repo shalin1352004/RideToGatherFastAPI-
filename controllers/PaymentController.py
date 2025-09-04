@@ -19,4 +19,4 @@ async def get_payments(min_amount:float):
 
 async def get_all_payments():
     cursor = await payments_collection.find().to_list(length=100)
-    return [Payment(**payment) for payment in cursor]          
+    return [Payment(*payment) for payment in cursor]          
