@@ -1,0 +1,163 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #666;
+  font-size: 2em;
+  margin: 40px 0 20px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  flex: 1 1 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+button {
+  padding: 12px 25px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff6b6b, #ffa500);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff5252, #ff8c00);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.profile-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.profile-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="file"] {
+    flex: 1 1 100%;
+  }
+
+  .profile-card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .profile-card {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
